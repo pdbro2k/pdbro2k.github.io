@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<title>colorInterpolator Test</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="">
+<body>
+	<div id="wrapper"></div>
+	<script type="text/javascript">
+// create elements to be color coded
+let wrapper = document.getElementById("wrapper");
+let step = 25
+for (var i = 175; i <= 750; i+=step) {
+	var node = document.createElement("h2");
+	var textnode = document.createTextNode(i);
+	node.appendChild(textnode);
+	wrapper.appendChild(node);
+}
+	</script>
+	<script type="text/javascript" src="../resources/js/colorInterpolator.js"></script>
+	<script type="text/javascript">
+// build conf
+var conf = {
+	"min": 180,
+	"max": 720
+}
+
+// get nodes
+var nodes = document.getElementById("wrapper").children;
+
+// interpolate
+for (var i=0; i < nodes.length; ++i) {
+    var currentValue = parseInt(nodes[i].innerHTML);	
+	var currentColor = interpolate(currentValue, conf);
+	nodes[i].style.cssText = "background-color: " + currentColor + ";";
+
+	// adapt text color to improve readability
+	if (currentValue > conf.max * .75) {
+		nodes[i].style.cssText += "color: white;";
+	}
+}
+	</script>
+
+</body>
+</html> 
