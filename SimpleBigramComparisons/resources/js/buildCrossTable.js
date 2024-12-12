@@ -21,8 +21,9 @@ function buildTable(nodes, tableId) {
 	let textData = {};
 	let bigramData = {};
 	for (let i = 0; i < nodes.length; i++) {
-	  textData[nodes[i].id] = nodes[i].text;
-	  bigramData[nodes[i].id] = getBigrams(normalizeText(nodes[i].text));
+		let transliteration = "translit" in nodes[i] ? nodes[i].translit : nodes[i].text;
+		textData[nodes[i].id] = transliteration;
+		bigramData[nodes[i].id] = getBigrams(normalizeText(transliteration));
 	}
 	
 	let table = $("<table id='" + tableId + "'></table>");

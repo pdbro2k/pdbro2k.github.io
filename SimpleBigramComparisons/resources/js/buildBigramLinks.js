@@ -52,7 +52,7 @@ function buildBigramLinks(nodes) {
   // get bigrams
   let bigramData = {};
   for (let i = 0; i < nodes.length; i++) {
-    bigramData[nodes[i].id] = getBigrams(normalizeText(nodes[i].text));
+    bigramData[nodes[i].id] = getBigrams(normalizeText("translit" in nodes[i] ? nodes[i].translit : nodes[i].text));
   }
 
   // get relative equal bigrams
