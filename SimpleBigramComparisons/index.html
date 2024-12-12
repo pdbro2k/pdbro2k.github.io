@@ -40,7 +40,11 @@
     <script type="text/javascript" src="data/easterNodes.js"></script>
     <script type="text/javascript">
 $("#crosstableWrapper").append(buildTable(nodes, "crosstable"));
-initD3Graph("#viewport", nodes, buildBigramLinks(nodes), {}, true, -1500);
+let conf = {
+	"addTexts": true,
+  "manyBodyForceStrength": -1500
+};
+initD3Graph("#viewport", nodes, buildBigramLinks(nodes), conf);
     </script>
 
     <script type="text/javascript">
