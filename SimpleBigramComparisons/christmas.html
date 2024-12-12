@@ -49,19 +49,10 @@ let conf = {
 initD3Graph("#viewport", nodes, buildBigramLinks(nodes), conf);
     </script>
 
-    <script type="text/javascript">
-// init label toggler
-function toggleLabels() {
-	if ($("#labelToggler").is(':checked'))
-		$("g text").show();
-	else
-		$("g text").hide();
-}
-$("#labelToggler").change(function() {
-	toggleLabels();
-});
-toggleLabels();
-	</script>
+    <script type="text/javascript" src="resources/js/toggleLabels.js"></script>
+
+    <script type="text/javascript" src="../colorInterpolator.js/resources/js/colorInterpolator.js"></script>
+    <script type="text/javascript" src="resources/js/interpolateTableCells.js"></script>
   </main>
 </body>
 

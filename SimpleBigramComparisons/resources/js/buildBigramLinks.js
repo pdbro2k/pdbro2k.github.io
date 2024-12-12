@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 function normalizeText(text) {
   let normalizedText = text.trim(); // remove leading/trailing whitespace
