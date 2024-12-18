@@ -8,6 +8,7 @@ var nodes = [
 	{ 'id': 'Romanian', 'text': 'Crăciun Fericit', 'img': 'resources/img/ro.png' },
 	{ 'id': 'Greek', 'text': 'Καλά Χριστούγεννα', 'translit': 'Kalá Christoúgenna', 'img': 'resources/img/gr.png' },
 	{ 'id': 'Polish', 'text': 'Wesołych Świąt', 'img': 'resources/img/pl.png' },
+	{ 'id': 'Croatian', 'text': 'Sretan Božić', 'img': 'resources/img/hr.png' },
 	{ 'id': 'Ukrainian', 'text': 'З Різдвом', 'translit': 'Z Rizdvom', 'img': 'resources/img/ua.png' },
 	{ 'id': 'Finnish', 'text': 'Hyvää Joulua', 'img': 'resources/img/fi.png' },
 	{ 'id': 'Japanese', 'text': 'クリスマスおめでとう', 'translit': 'KURISUMASU omedetou', 'img': 'resources/img/jp.png' },
